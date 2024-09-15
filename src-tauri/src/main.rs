@@ -1,11 +1,10 @@
 mod infrastructure;
-mod presentation;
+mod rpc;
 
-use discord_presence::{Client as DiscordClient, Event};
+use discord_presence::Client as DiscordClient;
 use std::sync::{Arc, Mutex};
 use infrastructure::discord::discord_state::DiscordState;
-use presentation::rpc::discord;
-
+use rpc::discord;
 
 fn main() {
     let discord_state = Arc::new(

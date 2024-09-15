@@ -12,11 +12,11 @@ pub async fn update_discord_presence(
     state_text: String,
 ) -> Result<(), String> {
     let state_clone = state.inner().clone();
-    
+
     task::spawn_blocking(move || {
         let mut discord_state = state_clone.lock().unwrap();
         if let Some(client) = &mut discord_state.client {
-            client.set_activity(|activity| {
+            let _ = client.set_activity(|activity| {
                 activity
                     .state(state_text)
                     .details(details)
