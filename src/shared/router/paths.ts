@@ -1,4 +1,5 @@
 export const paths = {
     index: '/',
-    favorites: '/favorites'
+    favorites: '/favorites',
+    settings: '/settings'
 }
