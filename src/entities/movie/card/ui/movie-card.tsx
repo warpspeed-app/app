@@ -34,7 +34,7 @@ export const MovieCard: FC<MovieCardProps> = ({
             Add to library
           </Button>
         </div>
-        <div className="absolute top-2 right-2 bg-yellow-400 text-black font-bold px-2 py-1 rounded-md flex items-center">
+        <div className="absolute top-2 right-2 bg-yellow-400 text-black font-bold px-2 py-1 md:text-xs lg:text-md rounded-md flex items-center">
           <Star className="h-4 w-4 mr-1 fill-current" />
           {rating.toFixed(1)}
         </div>
