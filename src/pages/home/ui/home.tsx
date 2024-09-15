@@ -1,16 +1,22 @@
 import { discordPresenceMutation } from "@/shared/api/warpspeed";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { useUnit } from "effector-react";
 
 export const HomePage = () => {
-  const discordPresence = useUnit(discordPresenceMutation.start);
-
   useEffect(() => {
-    discordPresence({
+    discordPresenceMutation.start({
       text: "In the HomePage",
       details: "Want something",
     });
   }, []);
 
-  return <h1>hi from home page</h1>;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+    >
+      test
+    </motion.div>
+  );
 };

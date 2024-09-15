@@ -16,7 +16,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
     <Link to={to}>
       <Button
         variant={active ? "default" : "outline"}
-        className="w-full justify-start"
+        className="w-full justify-start gap-2"
       >
         {children}
       </Button>
